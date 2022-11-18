@@ -1,0 +1,66 @@
+/* body{
+   background-color: black;
+   
+
+} */
+
+
+.ubicacion1{
+   flex-direction: column;
+   display: flex;
+   align-items: center;
+   background-color: #1c8897;
+}
+h1{
+   
+   text-align: left;
+   text-decoration-color: aliceblue;
+   
+   text-shadow: 1px 1px #fff;
+   
+}
+.horar{
+   background-color: #5f6b6d ;
+   background-image: url("/assets/items/hor.jpg");
+   
+   height: 1070px;
+   width: 1070px;
+  
+
+}
+/* .cont{
+   background-color: aqua;} */
+   
+
+
+/* Relación: 16/9 = 56.25% */ 
+/*  
+.contenedor1{
+   
+   height:100px;
+   width:100%;
+   padding-top:0% ; 
+   position:relative;
+   position:fixed;
+   right: 0;
+   bottom: 0;
+   min-width: 100%;
+   min-height: 100%;
+
+}  */
+
+
+
+/* #myVideo {
+  margin-left :auto;
+  margin-right :auto; 
+  position:fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}  */
+.container{
+   opacity: 0.7;
+   height: 500px;
+}

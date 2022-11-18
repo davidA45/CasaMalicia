@@ -1,0 +1,57 @@
+
+<section ngClass="cond">
+  <h1>Solicitu de reserva</h1>
+<br>
+<form #myForm="ngForm">
+  <label
+    >Nombre:<input
+      type="text"
+      name="name"
+      [(ngModel)]="model.name"
+      required
+      #name="ngModel"
+  /></label>
+  <app-form-error-container [forControl]="name.control">
+    <app-form-error-msg forErrorCode="required"></app-form-error-msg>
+  </app-form-error-container>
+
+  <label
+    >Email:<input
+      type="email"
+      name="email"
+      [(ngModel)]="model.email"
+      required
+      email
+      #email="ngModel"
+  /></label>
+  <app-form-error-container [forControl]="email.control">
+    <app-form-error-msg forErrorCode="required"></app-form-error-msg>
+    <app-form-error-msg forErrorCode="email"></app-form-error-msg>
+  </app-form-error-container>
+<br>
+  <label
+    >Mensaje:<textarea
+      name="message"
+      [(ngModel)]="model.message"
+      required
+      appDoesntContainNTilde
+      #message="ngModel"
+    ></textarea>
+  </label>
+  <app-form-error-container [forControl]="message.control">
+    <app-form-error-msg forErrorCode="required"></app-form-error-msg>
+    <app-form-error-msg
+      forErrorCode="doesntContainNTilde"
+      customMsg="Este campo no puede contener el caracter Ñ"
+    ></app-form-error-msg>
+  </app-form-error-container>
+ <br>
+  <button
+    type="submit"
+    (click)="onSubmit(myForm.value)"
+    [disabled]="(myForm.statusChanges | async) === 'INVALID'"
+  >
+    Enviar
+  </button>
+</form>
+</section>

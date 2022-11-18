@@ -1,0 +1,33 @@
+
+<button class="close">
+  <img src="/assets/close_white.svg" alt="Cerrar Menú" />
+</button>
+<nav>
+  <ul>
+    <li><a routerLink="reservas">Home</a></li>
+    <li><a routerLink="contact">Reservas</a></li>
+    <!-- <li><a routerLink="/">Horario </a></li> -->
+    <li><a routerLink="catalog">catalogo</a></li>
+    <li><a routerLink="/">valoranos</a></li>
+    <li><a routerLink="/">Nosotros</a></li>
+  </ul>
+
+  <div class="user-row">
+    <ul>
+      <li>
+        <ng-container *ngIf="!(isUserLoggedIn$ | async)">
+          <a routerLink="login">Iniciar Sesión</a>
+        </ng-container>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <ng-container *ngIf="isUserLoggedIn$ | async">
+          <a routerLink="user/profile">Perfil</a>
+          <a href="" (click)="logOut(); (false)">Cerrar Sesión</a>
+        </ng-container>
+      </li>
+    </ul>
+  </div>
+</nav>
+

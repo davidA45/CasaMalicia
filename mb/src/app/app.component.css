@@ -1,0 +1,11 @@
+.container {
+    background-size: cover;
+    background-position: top center;
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    padding-top: 0%;
+  }
+
+ 
